@@ -6,11 +6,11 @@ interface SpecificationInterface
 {
 
     /**
-     * @param $object
+     * @param mixed|null $object
      *
      * @return bool
      */
-    public function isSatisfiedBy($object);
+    public function isSatisfiedBy($object = null);
 
     /**
      * @param SpecificationInterface $specification

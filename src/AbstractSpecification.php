@@ -50,9 +50,9 @@ abstract class AbstractSpecification implements SpecificationInterface
     }
 
     /**
-     * @param $object
+     * @param mixed|null $object
      *
      * @return bool
      */
-    public abstract function isSatisfiedBy($object);
+    public abstract function isSatisfiedBy($object = null);
 }
