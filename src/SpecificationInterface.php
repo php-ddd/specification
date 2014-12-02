@@ -2,8 +2,8 @@
 
 namespace PhpDDD\Specification;
 
-
-interface SpecificationInterface {
+interface SpecificationInterface
+{
 
     /**
      * @param $object

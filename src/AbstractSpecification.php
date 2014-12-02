@@ -7,14 +7,16 @@ use PhpDDD\Specification\Operator\NotSpecification;
 use PhpDDD\Specification\Operator\OrSpecification;
 use PhpDDD\Specification\Operator\XorSpecification;
 
-abstract class AbstractSpecification implements SpecificationInterface {
+abstract class AbstractSpecification implements SpecificationInterface
+{
 
     /**
      * @param SpecificationInterface $specification
      *
      * @return AndSpecification|SpecificationInterface
      */
-    public function andSpec(SpecificationInterface $specification) {
+    public function andSpec(SpecificationInterface $specification)
+    {
         return new AndSpecification($this, $specification);
     }
 
@@ -23,7 +25,8 @@ abstract class AbstractSpecification implements SpecificationInterface {
      *
      * @return OrSpecification|SpecificationInterface
      */
-    public function orSpec(SpecificationInterface $specification) {
+    public function orSpec(SpecificationInterface $specification)
+    {
         return new OrSpecification($this, $specification);
     }
 
@@ -32,7 +35,8 @@ abstract class AbstractSpecification implements SpecificationInterface {
      *
      * @return XorSpecification|SpecificationInterface
      */
-    public function xorSpec(SpecificationInterface $specification) {
+    public function xorSpec(SpecificationInterface $specification)
+    {
         return new XorSpecification($this, $specification);
     }
 
@@ -40,7 +44,8 @@ abstract class AbstractSpecification implements SpecificationInterface {
      *
      * @return NotSpecification|SpecificationInterface
      */
-    public function notSpec() {
+    public function notSpec()
+    {
         return new NotSpecification($this);
     }
 

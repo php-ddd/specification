@@ -5,7 +5,8 @@ namespace PhpDDD\Specification\Operator;
 use phpDDD\specification\AbstractSpecification;
 use phpDDD\specification\SpecificationInterface;
 
-class NotSpecification extends AbstractSpecification implements SpecificationInterface {
+class NotSpecification extends AbstractSpecification implements SpecificationInterface
+{
 
     /**
      * @var SpecificationInterface
@@ -15,7 +16,8 @@ class NotSpecification extends AbstractSpecification implements SpecificationInt
     /**
      * @param SpecificationInterface $specification
      */
-    public function __construct(SpecificationInterface $specification) {
+    public function __construct(SpecificationInterface $specification)
+    {
         $this->specification = $specification;
     }
 
@@ -24,7 +26,8 @@ class NotSpecification extends AbstractSpecification implements SpecificationInt
      *
      * @return bool
      */
-    public function isSatisfiedBy($object) {
+    public function isSatisfiedBy($object)
+    {
         return !$this->specification->isSatisfiedBy($object);
     }
 }

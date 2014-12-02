@@ -22,7 +22,7 @@ class XorSpecification extends AbstractSpecification implements SpecificationInt
      * @param SpecificationInterface $specification1
      * @param SpecificationInterface $specification2
      */
-    function __construct(SpecificationInterface $specification1, SpecificationInterface $specification2)
+    public function __construct(SpecificationInterface $specification1, SpecificationInterface $specification2)
     {
         $this->specification1 = $specification1;
         $this->specification2 = $specification2;

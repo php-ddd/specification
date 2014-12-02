@@ -17,7 +17,6 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
      */
     private $falseSpecification;
 
-
     protected function setup()
     {
         $this->trueSpecification = $this->getMockForAbstractClass('PhpDDD\Specification\AbstractSpecification');
