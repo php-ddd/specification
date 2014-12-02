@@ -29,11 +29,11 @@ class AndSpecification extends AbstractSpecification implements SpecificationInt
     }
 
     /**
-     * @param $object
+     * @param mixed|null $object
      *
      * @return bool
      */
-    public function isSatisfiedBy($object)
+    public function isSatisfiedBy($object = null)
     {
         return $this->specification1->isSatisfiedBy($object)
                && $this->specification2->isSatisfiedBy($object);
