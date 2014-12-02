@@ -1,0 +1,29 @@
+{
+    "name": "php-ddd/specification",
+    "description": "Library to manage specification design pattern",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"PhpDDD\\Specification\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpDDD\\Specification\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julien Dufresne"
+        },
+        {
+            "name": "Damien Buton"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*",
+        "pdepend/pdepend": "@stable"
+    }
+}
