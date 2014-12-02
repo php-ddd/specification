@@ -38,7 +38,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testAndSpecWithTrueAndFalseReturns()
     {
         $specification = $this->trueSpecification->andSpec($this->falseSpecification);
-        $this->assertFalse($specification->isSatisfiedBy(''));
+        $this->assertFalse($specification->isSatisfiedBy());
     }
 
     /**
@@ -47,7 +47,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testAndSpecWithBothTrueReturns()
     {
         $specification = $this->trueSpecification->andSpec($this->trueSpecification);
-        $this->assertTrue($specification->isSatisfiedBy(''));
+        $this->assertTrue($specification->isSatisfiedBy());
     }
 
     /**
@@ -56,7 +56,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testOrSpecWithTrueAndFalseReturns()
     {
         $specification = $this->trueSpecification->orSpec($this->falseSpecification);
-        $this->assertTrue($specification->isSatisfiedBy(''));
+        $this->assertTrue($specification->isSatisfiedBy());
     }
 
     /**
@@ -65,7 +65,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testOrSpecWithBothTrueReturns()
     {
         $specification = $this->trueSpecification->orSpec($this->trueSpecification);
-        $this->assertTrue($specification->isSatisfiedBy(''));
+        $this->assertTrue($specification->isSatisfiedBy());
     }
 
     /**
@@ -74,7 +74,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testOrSpecWithBothFalseReturns()
     {
         $specification = $this->trueSpecification->orSpec($this->trueSpecification);
-        $this->assertTrue($specification->isSatisfiedBy(''));
+        $this->assertTrue($specification->isSatisfiedBy());
     }
 
     /**
@@ -83,7 +83,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testNotSpecWithFalseReturn()
     {
         $specification = $this->falseSpecification->notSpec();
-        $this->assertTrue($specification->isSatisfiedBy(''));
+        $this->assertTrue($specification->isSatisfiedBy());
     }
 
     /**
@@ -92,7 +92,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testNotSpecWithTrueReturn()
     {
         $specification = $this->trueSpecification->notSpec();
-        $this->assertFalse($specification->isSatisfiedBy(''));
+        $this->assertFalse($specification->isSatisfiedBy());
     }
 
     /**
@@ -101,7 +101,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testXorSpecWithTrueAndFalseReturns()
     {
         $specification = $this->trueSpecification->xorSpec($this->falseSpecification);
-        $this->assertTrue($specification->isSatisfiedBy(''));
+        $this->assertTrue($specification->isSatisfiedBy());
     }
 
     /**
@@ -110,7 +110,7 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testXorSpecWithBothTrueReturns()
     {
         $specification = $this->trueSpecification->xorSpec($this->trueSpecification);
-        $this->assertFalse($specification->isSatisfiedBy(''));
+        $this->assertFalse($specification->isSatisfiedBy());
     }
 
     /**
@@ -119,6 +119,6 @@ class SpecificationTest extends PHPUnit_Framework_TestCase
     public function testXorSpecWithBothFalseReturns()
     {
         $specification = $this->falseSpecification->xorSpec($this->falseSpecification);
-        $this->assertFalse($specification->isSatisfiedBy(''));
+        $this->assertFalse($specification->isSatisfiedBy());
     }
 } 
